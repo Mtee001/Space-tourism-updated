@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: url('../IMG/home/background-home-mobile.jpg') no-repeat center/cover;
+    height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    margin: 1.5rem 0 0 1.5rem;
+}
+#nav .navigation-menu{
+    display: flex;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1.5rem);
+    font-family: 'Barlow condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    
+}
+#nav .navigation-menu span{
+    font-weight: 900;
+}
+#nav ul li a{
+    color: #ffffff;
+    
+}
+#nav ul li{
+    margin: 2rem 0 0 0;
+}
+.hamburger{
+    display: none;
+}
+main .body-text{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    align-items: center;
+}
+main .body-text .top-text{
+    text-transform: uppercase;
+    font-family: 'barlow condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+    margin-bottom: 2rem;
+}
+main .body-text .center-text{
+    font-size: 80px;
+    text-transform: uppercase;
+    font-family: 'Bellefair', sans-serif;
+    -webkit-text-stroke: 2px #ffffff;
+    font-weight: normal;
+}
+main .body-text .bottom-text{
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+} 
+.explore-button{
+    font-family: 'Bellefair', sans-serif;
+    font-size: 20px;
+    /* text-align: center; */
+    border: 1px solid transparent;
+    background: #ffffff;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 10rem auto;
+    position: relative;
+}
+.explore-button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #0b0d17;
+    position: absolute;
+    left: 33px;
+    top: 65px;
+}
+@media (max-width: 768px){
+    #nav .navigation-menu{
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: 7rem 0 0 3rem;
+        transform: translateX(100%);
+        transition: all 900ms ease-in-out;
+        z-index: 100;
+    }
+    #nav .navigation-menu[data-visible="true"]{
+        transform: translateX(0%);
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background: url(../IMG/shared/icon-hamburger.svg) no-repeat;
+        z-index: 1000;
+        width: 2rem;
+        height: 2rem;
+        border: none;
+    }
+    .hamburger[aria-expanded="true"]{
+        background: url(../IMG/shared/icon-close.svg) no-repeat;
+    }
+    /* .toggle{
+        transform: translateX(0%);
+    } */
+}
+
